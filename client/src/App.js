@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from 'react-router';
 import { Switch, Route } from 'react-router-dom';
 
 //views
@@ -25,7 +26,8 @@ class App extends React.Component {
             <Route exact path="/register" component={Register} />
             <Route exact path='/all-journals' component={AllJournals} />
             <Route path='/single-journal/:id' component={SingleJournal} />
-            <Route path='/new-journal-entry' component={NewJournalEntry} />
+            <Route exact path='/new-journal-entry' component={NewJournalEntry} />
+            <Redirect from="/" to="/home" />
         </Switch>
       </div>
     );
