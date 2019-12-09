@@ -43,7 +43,7 @@ class Register extends React.Component {;
 				return false;
 			}
 		}
-		//check that passwords match, return false i not
+		//check that passwords match, return false if not
 		if (this.state.inputs.password !== this.state.inputs.confirmPassword) {
 			return false;
 		}
@@ -54,6 +54,7 @@ class Register extends React.Component {;
 		e.preventDefault();
 		axios.post('user/register', this.state.inputs)
 			.then(response => {
+				//if data comes back successfully, allow page to redirect
 				this.setState({redirect: true});
 			})
 			.catch(err => {

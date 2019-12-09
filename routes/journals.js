@@ -1,6 +1,7 @@
 const express = require('express');
 const journalsRoute = express.Router();
 
+//retrieve array of all journal entries
 journalsRoute.route('/all-journals')
     .get((req, res) => {
 		req.db.all(`SELECT location, date, photoURL, description, id FROM journals`, (err, rows) => {
@@ -8,6 +9,7 @@ journalsRoute.route('/all-journals')
 		});
     });
 
+//retrieve a single journal entry by ID
 journalsRoute.route('/:id')
     .get((req, res) => {
 		req.db.get(`SELECT location, date, photoURL, description, id FROM journals WHERE id = '${req.params.id}'`, (err, row) => {
@@ -16,7 +18,7 @@ journalsRoute.route('/:id')
 	});
 
 
-//ADD JOURNAL ENTRY TO TABLE OF ENTRIES	
+//add a single journal entry to journals table	
 journalsRoute.route('/new-entry')
 	.post((req, res) => {
 		let {location, date, photoURL, description, id} = req.body;

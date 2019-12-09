@@ -1,12 +1,14 @@
 const express = require('express');
 const userRoutes = express.Router();
 
+//add user to users table
 userRoutes.route("/register")
     .post((req, res) => {
 		let {username, email, password} = req.body;
 		return res.send(req.db.exec(`INSERT INTO users (username, email, password) VALUES ("${username}", "${email}", "${password}")`));
     })
 
+//check for user in users table and login
 userRoutes.route("/login")
     .post((req, res) => {
 		let {username, password} = req.body;

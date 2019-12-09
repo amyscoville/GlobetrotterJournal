@@ -15,6 +15,7 @@ class SingleJournal extends React.Component {
 		const {id} = this.props.match.params;
 		axios.get(`/journals/${id}`)
 			.then(response => {
+				//response data will include  location, date, etc for displaying on render
 				this.setState({
 					...response.data,
 					loading: false

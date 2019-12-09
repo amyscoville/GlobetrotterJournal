@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import './CSS/Nav.css';
 
 function Navbar() {
+	//check the current url and display only pertinent navigation items based on current view
 	return (
 		<div className="nav-container">
 			{!window.location.href.includes('/home') ?

@@ -20,3 +20,5 @@ function JournalCard(props) {
 }
 
 export default JournalCard;
+
+//Journal Cards are a Link component so that clicking on any part of the card will redirect the user to a view of that single journal entry

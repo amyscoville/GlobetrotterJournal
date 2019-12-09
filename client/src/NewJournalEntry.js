@@ -36,6 +36,7 @@ class NewJournalEntry extends React.Component {
 
 	handleSubmit(e) {
 		e.preventDefault();
+		//send the input values in with a new, random ID for the journal entry
 		axios.post('/journals/new-entry', {...this.state.inputs, id: uuid()})
 			.then((response) => {
 				this.setState({
@@ -48,6 +49,7 @@ class NewJournalEntry extends React.Component {
 	}
 
 	render() {
+		//if new entry has been successfully submitted, redirect to the All Journals view
 		if (this.state.redirect) {
 			return <Redirect to="/all-journals"/>;
 		}

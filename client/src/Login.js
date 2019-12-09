@@ -51,6 +51,7 @@ class Login extends React.Component {
 					this.setState({redirect: true});
 				}
 				else {
+					//if login doesn't match records, display error message (in render method)
 					this.setState({invalidLogin: true});
 				}
 			})
@@ -61,6 +62,8 @@ class Login extends React.Component {
 
 	render() {
 		let {username, password} = this.state.inputs;
+
+		//if login was successful, user is redirected to the All Journals view
 		if (this.state.redirect) {
 			return <Redirect to="/all-journals"/>
 		}

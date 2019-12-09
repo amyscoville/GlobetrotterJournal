@@ -1,6 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
+//views
 import Home from './Home';
 import Login from './Login';
 import Register from './Register';
@@ -13,9 +14,6 @@ import './CSS/App.css';
 class App extends React.Component {
   constructor(props) {
     super();
-  }
-
-  componentDidMount(){
   }
 
   render() {

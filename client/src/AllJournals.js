@@ -34,9 +34,11 @@ class AllJournals extends React.Component {
 	}
 
 	render() {
-		if (this.state.loagin) {
+		//if data has not yet been returned from call to SQL database, render a loading message
+		if (this.state.loading) {
 			return <div>loading</div>;
 		}
+		//if data is finished loading, render journal card for each journal entry
 		return (
 			<div className="AllJournals-wrapper">
 				<Navbar />
