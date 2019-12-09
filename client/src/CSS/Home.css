@@ -1,0 +1,15 @@
+.Home-body {
+	height: calc(100vh - 50px);
+	padding-top: 50px;
+	background-image: url('https://www.traveltyme.com/uploads/1/2/2/2/122200165/venice_1_orig.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.logo {
+	padding-top: 50px;
+	color: white;
+	font-size: 100px;
+	font-weight: bold;
+	margin: 0 auto;
+}

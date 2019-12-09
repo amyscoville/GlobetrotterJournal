@@ -1,0 +1,23 @@
+.SingleJournal-wrapper {
+	display: flex;
+	justify-content: center;
+}
+.SingleJournal-content {
+	width: 700px;
+	padding-top: 100px;
+}
+.SingleJournal-title-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.SingleJournal-title {
+	font-size: 20px;
+	font-weight: bold;
+}
+.SingleJournal-image-wrapper > img {
+	width: 700px;
+}
+.SingleJournal-description {
+	text-align: left;
+}
